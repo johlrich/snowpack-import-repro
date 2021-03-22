@@ -1,5 +1,13 @@
 import App from './App.svelte';
 
+// below import causes failure running build
+import { hello } from "./.test/hello";
+
+// below import is ok
+// import { hello } from "./_test/hello";
+
+hello("there")
+
 let app = new App({
   target: document.body,
 });
